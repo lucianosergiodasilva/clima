@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <title>Previsão do tempo</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input type="text" class="form__input" placeholder="Informe uma cidade, e clique na lupa" />
+        <button type="button" class="form__botao"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <div class="cidade">
+        <h1><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, BR</h1>
+      </div>
+      <div class="previsao-destaque">
+        <div class="icone-destaque">😍</div>
+        <div class="temperatura-destaque">
+          <h2>32 Cº</h2>
+          <p>Ensolarado</p>
+        </div>
+      </div>
+      <div class="temperatura__maxima">
+        <i class="fa-solid fa-temperature-full"></i>
+        <div>
+          <p>Máxima</p>
+          <h3>32 Cº</h3>
+        </div>
+      </div>
+      <div class="temperatura__minima">
+        <i class="fa-solid fa-temperature-low"></i>
+        <div>
+          <p>Mínima</p>
+          <h3>12 Cº</h3>
+        </div>
+      </div>
+      <div class="temperatura__manha">
+        <i class="fa-solid fa-temperature-high"></i>
+        <p>06:00</p>
+        <h4>12 Cº</h4>
+      </div>
+      <div class="temperatura__noite">
+        <i class="fa-solid fa-temperature-high"></i>
+        <p>18:00</p>
+        <h4>12 Cº</h4>
+      </div>
+      <div class="temperatura__madrugada">
+        <i class="fa-solid fa-temperature-high"></i>
+        <p>00:00</p>
+        <h4>12 Cº</h4>
+      </div>
+      <div class="umidade">
+        <i class="fa-solid fa-droplet"></i>
+        <p>Umidade</p>
+        <h3>50%</h3>
+      </div>
+      <div class="vento">
+        <i class="fa-solid fa-wind"></i>
+        <p>Vento</p>
+        <h3>50 km/h</h3>
+      </div>
+      <div class="nuvem">
+        <i class="fa-solid fa-cloud"></i>
+        <p>Nuvem</p>
+        <h4>Cobertura de nuvens às 12:00</h4>
+      </div>
+      <div class="dica">
+        <i class="fa-solid fa-drumstick-bite"></i>
+        <h4>Vai rolar o churrasco</h4>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
