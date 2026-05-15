@@ -1,6 +1,23 @@
 import { KEY_API_OPENWEATHER } from "./config.js";
 
-console.log(KEY_API_OPENWEATHER);
+const cidade = "Rio de Janeiro";
+const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cidade)}&appid=${KEY_API_OPENWEATHER}`;
+
+const respostaApi = fetch(urlApi)
+  .then((res) => res.json())
+  .then((dados) =>
+    console.log({
+      temp: dados.main.temp,
+      max: dados.main.temp_max,
+      min: dados.main.temp_min,
+      umidity: dados.main.humidity,
+      name: dados.name,
+      dt: dados,
+    }),
+  )
+  .catch((err) => console.error("Erro: ", err));
+
+console.log(respostaApi);
 
 // Obtém o valor do input
 function obterInputValue() {}
@@ -18,9 +35,6 @@ function mostrarMensagem(mensagem) {}
 function renderizarDados(json) {}
 
 /*
-
-key api:
-035b2a34c684eba5b4fedaa6caea0eb0
 
     [ ] Acessar api
     [ ] Obter a localização (cidade) do dispositivo.
