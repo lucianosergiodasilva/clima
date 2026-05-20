@@ -21,9 +21,9 @@ jobs:
       # O robô entra no seu script.js e troca a palavra-passe pela chave que você guardou no GitHub Settings
       - name: Injetar chaves secretas
         run: |
-          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_OPENWEATHER }}/g' script.js
-          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_UNSPLASH }}/g' script.js
-          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.URL_API_OPENWEATHER }}/g' script.js
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_OPENWEATHER }}/g' config.js
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_UNSPLASH }}/g' config.js
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.URL_API_OPENWEATHER }}/g' config.js
 
       - name: Configurar ambiente do GitHub Pages
         uses: actions/configure-pages@v4
