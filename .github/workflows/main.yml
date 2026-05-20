@@ -1,0 +1,37 @@
+name: Deploy para o GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Executa toda vez que você der push na branch main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # É NESTA ETAPA QUE A MÁGICA ACONTECE:
+      # O robô entra no seu script.js e troca a palavra-passe pela chave que você guardou no GitHub Settings
+      - name: Injetar chaves secretas
+        run: |
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_OPENWEATHER }}/g' script.js
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.KEY_API_UNSPLASH }}/g' script.js
+          sed -i 's/X_CHAVE_SECRETA_X/${{ secrets.URL_API_OPENWEATHER }}/g' script.js
+
+      - name: Configurar ambiente do GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload dos arquivos do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "." # Envia todos os arquivos da pasta atual
+
+      - name: Publicar o site
+        uses: actions/deploy-pages@v4
