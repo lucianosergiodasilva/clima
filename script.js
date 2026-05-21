@@ -1,5 +1,3 @@
-// import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./.env";
-
 const key_openweather = KEY_API_OPENWEATHER;
 const key_unsplash = KEY_API_UNSPLASH;
 const url_openweather = URL_API_OPENWEATHER;
