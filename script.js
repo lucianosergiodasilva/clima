@@ -1,5 +1,4 @@
 // import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./.env";
-// require("dotenv").config();
 
 const key_openweather = KEY_API_OPENWEATHER;
 const key_unsplash = KEY_API_UNSPLASH;
@@ -138,14 +137,3 @@ function renderizarDados(dados) {
 
 document.addEventListener("DOMContentLoaded", getLocationCurrent);
 document.querySelector(".form__botao").addEventListener("click", buscarCidadeSubmit);
-
-/*
-
-    [x] A função getApiOpenWeatherLocation nao está funcionando
-    [x] Acessar api
-    [x] Obter a localização (cidade) do dispositivo.
-    [x] Converter valores decimais para uma casa decimal.
-    [x] Pegar o ícone da api
-    [x] Criar uma verificação para a dica, baseado no horário e clima
-
-*/
