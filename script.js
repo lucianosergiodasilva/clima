@@ -1,10 +1,14 @@
 // import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./.env";
-require("dotenv").config();
+// require("dotenv").config();
+
+const key_openweather = KEY_API_OPENWEATHER;
+const key_unsplash = KEY_API_UNSPLASH;
+const url_openweather = URL_API_OPENWEATHER;
 
 // INSERE UMA FOTO DE FUNDO
 // Acessa a api e obtém os dados
 async function getApiUnsplash(cidade) {
-  const urlApi = `https://api.unsplash.com/search/photos?page=1&query=${encodeURI(cidade)}&client_id=${process.env.KEY_API_UNSPLASH}`;
+  const urlApi = `https://api.unsplash.com/search/photos?page=1&query=${encodeURI(cidade)}&client_id=${key_unsplash}`;
   // Controle de erro
   try {
     // Acessa a api
@@ -27,7 +31,7 @@ async function getApiUnsplash(cidade) {
 
 // Acessa a api Open Weather quando clica em buscar
 async function getApiOpenWeather(cidade) {
-  const urlApi = `${process.env.URL_API_OPENWEATHER}?q=${encodeURI(cidade)}&appid=${process.env.KEY_API_OPENWEATHER}&units=metric&lang=pt_br`;
+  const urlApi = `${url_openweather}?q=${encodeURI(cidade)}&appid=${key_openweather}&units=metric&lang=pt_br`;
   // Controle de erro
   try {
     // Acessa a api
@@ -49,7 +53,7 @@ async function getApiOpenWeather(cidade) {
 // Acessa a api Open Weather quando a página carrega
 // Pega a latitude e longitudo do navegador
 async function getApiReverseGeocoding(lat, lon) {
-  const urlApi = `${process.env.URL_API_OPENWEATHER}?lat=${lat}&lon=${lon}&appid=${process.env.KEY_API_OPENWEATHER}&units=metric&lang=pt_br`;
+  const urlApi = `${url_openweather}?lat=${lat}&lon=${lon}&appid=${key_openweather}&units=metric&lang=pt_br`;
   // Controle de erro
   try {
     // Acessa a api
