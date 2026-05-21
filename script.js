@@ -1,4 +1,4 @@
-import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./config";
+import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./config.js";
 
 const key_openweather = KEY_API_OPENWEATHER;
 const key_unsplash = KEY_API_UNSPLASH;
