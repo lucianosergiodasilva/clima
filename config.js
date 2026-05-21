@@ -2,6 +2,4 @@
 
 export const KEY_API_OPENWEATHER = "035b2a34c684eba5b4fedaa6caea0eb0";
 export const URL_API_OPENWEATHER = "https://api.openweathermap.org/data/2.5/weather";
-
 export const KEY_API_UNSPLASH = "PaglGGYZoNJ3NllxiP9G2Q87GIT8n34l1P8MNKuV_wA";
-export const SECRET_KEY_UNSPLASH = "ccKniQwnwC-47Bj_7x8C4qVBw2FyDrT7yrr__P3cs0E";
