@@ -1,8 +1,6 @@
-import { KEY_API_OPENWEATHER, KEY_API_UNSPLASH, URL_API_OPENWEATHER } from "./config.js";
-
-const key_openweather = KEY_API_OPENWEATHER;
-const key_unsplash = KEY_API_UNSPLASH;
-const url_openweather = URL_API_OPENWEATHER;
+const key_openweather = "035b2a34c684eba5b4fedaa6caea0eb0";
+const key_unsplash = "PaglGGYZoNJ3NllxiP9G2Q87GIT8n34l1P8MNKuV_wA";
+const url_openweather = "https://api.openweathermap.org/data/2.5/weather";
 
 // INSERE UMA FOTO DE FUNDO
 // Acessa a api e obtém os dados
